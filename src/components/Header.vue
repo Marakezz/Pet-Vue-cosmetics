@@ -6,7 +6,7 @@ const emit = defineEmits(['openDrawer'])
 </script>
 
 <template>
-  <header class="flex justify-between border-b border-slate-200 px-10 py-8">
+  <header class="sm:flex justify-between border-b border-slate-200 px-10 py-8">
     <router-link to="/">
       <div class="flex items-center gap-4">
         <img src="/logo.png" alt="Logo" class="w-10" />

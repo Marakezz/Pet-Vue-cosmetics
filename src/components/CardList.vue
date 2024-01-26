@@ -10,7 +10,7 @@ const emit = defineEmits(['addToFavorite', 'addToCart'])
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-5" v-auto-animate>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" v-auto-animate>
     <!-- Когда используем v-for, Обязательно нужно указать уникальный ключ -->
     <Card
       v-for="item in items"

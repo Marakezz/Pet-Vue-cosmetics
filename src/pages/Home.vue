@@ -141,16 +141,19 @@ watch(cart, () => {
   <div>
     <Types @on-change-type="onChangeType" />
     <Sale @on-sale-clicked="onSaleClicked" />
-    <div class="p-10 flex justify-between items-center">
+    <div class="p-10 sm:flex justify-between items-center">
       <h2 class="text-3xl font-bold mb-8">Вся продукция</h2>
 
-      <div class="flex gap-4">
-        <label class="py-2 px-3">
+      <div class="lg:flex grid gap-4">
+        <label class="py-2 px-3 mb-2 sm:mb-0">
           <input ref="saleCheckBox" type="checkbox" @input="onSaleChecked" />
           Товары со скидкой
         </label>
 
-        <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
+        <select
+          @change="onChangeSelect"
+          class="py-2 px-3 border rounded-md outline-none mb-2 sm:mb-0"
+        >
           <option value="name">По названию</option>
           <option value="price">По цене(дешевые)</option>
           <option value="-price">По цене(дорогие)</option>
@@ -159,7 +162,7 @@ watch(cart, () => {
           <img class="absolute left-3 top-3" src="/search.svg" alt="search" />
           <input
             @input="onChangeSearchInput"
-            class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+            class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400 mb-2 sm:mb-0"
             placeholder="Поиск..."
           />
         </div>
