@@ -46,7 +46,7 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
     <div class="bg-white w-96 h-full fixed right-0 top-0 z-20 p-8">
       <DrawerHead />
 
-      <div v-if="!totalPrice || orderId" class="flex h-full items-center">
+      <div v-if="!totalPrice || orderId" class="drawer block h-full pb-60 pr-16">
         <Infoblock
           v-if="!totalPrice && !orderId"
           title="Корзина пустая"
@@ -61,7 +61,7 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
         />
       </div>
 
-      <div v-else>
+      <div class="h-full" v-else>
         <CartItemList />
 
         <div class="flex flex-col gap-4 mt-7">
@@ -88,3 +88,9 @@ const buttonDisabled = computed(() => isCreating.value || cartIsEmpty.value)
     </div>
   </div>
 </template>
+
+<style scoped>
+.drawer {
+  overflow: auto !important;
+}
+</style>
